@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block menu %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1>Лабиринт пройден!</h1>
+    <p>Примите поздравления Степика с успешным прохождение лабиринта!</p>
+</div>
+<div>
+    {% if img == 1 %}
+        {% set img_url = 'https://cdn.pixabay.com/photo/2016/06/01/12/59/pizza-1428931_1280.png' %}
+    {% elif img == 2 %}
+        {% set img_url = 'https://cdn.pixabay.com/photo/2013/07/13/01/21/euro-155597_1280.png' %}
+    {% else %}
+        {% set img_url = 'https://cdn.pixabay.com/photo/2013/07/13/12/19/chocolate-159631_1280.png' %}
+    {% endif %}
+    <p><img src="{{ img_url }}" class="img-responsive center-block" alt="Картинка приза"></p>
+</div>
+{% endblock %}

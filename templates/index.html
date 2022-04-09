@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block menu %}
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1>Лабиринт!</h1>
+        <p>Готовы отправиться в лабиринт и найти выход из него?</p>
+        <p><a class="btn btn-primary btn-lg" href="{{ url_for('game') }}" role="button">Пройти лабиринт</a></p>
+    </div>
+{% endblock %}
